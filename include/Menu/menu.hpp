@@ -8,8 +8,11 @@
 
 class Menu
 {
+private:
+    static QMenu *initMenu();
+
 public:
-    static QMenuBar *initMain() noexcept;
+    static QMenuBar *initMenuBar() noexcept;
 };
 
 #endif // MENU_HPP

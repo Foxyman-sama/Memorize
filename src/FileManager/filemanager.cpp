@@ -1,24 +1,20 @@
 #include "include/FileManager/filemanager.hpp"
 
 FileManager::FileManager(QObject *_p_parent) :
-    QObject {_p_parent}
-{
+    QObject {_p_parent} {
 }
 
-void FileManager::deleteWinApps() noexcept
-{
+void FileManager::deleteWinApps() noexcept {
     qDebug() << "1";
     //system("powershell.exe -command \"Get-AppxPackage | Remove-AppxPackage\"");
 }
 
-void FileManager::clearTemp() noexcept
-{
+void FileManager::clearTemp() noexcept {
     qDebug() << "2";
     //system("rd %temp% /s /q");
 }
 
-void FileManager::deleteHiberFile() noexcept
-{
+void FileManager::deleteHiberFile() noexcept {
     qDebug() << "3";
     //system("powercfg -h off");
 }

@@ -10,9 +10,9 @@ class FileManagerWidget : public AbstractWidget {
     Q_OBJECT
 
 private:
-    QCheckBox   *p_delwapps_;
-    QCheckBox   *p_clrtmp_;
-    QCheckBox   *p_delhibf_;
+    QCheckBox *p_delwapps_;
+    QCheckBox *p_clrtmp_;
+    QCheckBox *p_delhibf_;
 
     FileManager fm_;
 

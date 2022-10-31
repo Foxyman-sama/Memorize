@@ -23,6 +23,7 @@ void MainWindow::initCentralWidget() noexcept {
     p_mlayout_->addWidget(p_tbar_);
     p_mlayout_->addWidget(p_acceptb_);
 
+    setMenuBar(Menu::initMain());
     setCentralWidget(p_centwidg_);
 }
 

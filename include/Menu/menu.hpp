@@ -1,18 +1,15 @@
 #ifndef MENU_HPP
 #define MENU_HPP
 
-#include <QObject>
 #include <QMenu>
 #include <QAction>
+#include <QActionGroup>
+#include <QMenuBar>
 
-class Menu : public QObject
+class Menu
 {
-    Q_OBJECT
 public:
-    explicit Menu(QObject *parent = nullptr);
-
-signals:
-
+    static QMenuBar *initMain() noexcept;
 };
 
 #endif // MENU_HPP

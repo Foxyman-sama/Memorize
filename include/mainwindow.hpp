@@ -10,6 +10,7 @@
 
 #include "FileManager/filemanagerwidget.hpp"
 #include "SystemManager/systemmanagerwidget.hpp"
+#include "Menu/menu.hpp"
 
 class MainWindow : public QMainWindow
 {

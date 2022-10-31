@@ -1,13 +1,11 @@
 #include "include/SystemManager/systemmanager.hpp"
 
 SystemManager::SystemManager(QObject *_p_parent) :
-    QObject{_p_parent}
-{
+    QObject{_p_parent} {
 
 }
 
-void SystemManager::disableDefender() noexcept
-{
+void SystemManager::disableDefender() noexcept {
     /*
     system("REG ADD \"HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows Defender\" /v DisableAntiSpyware /t REG_DWORD /d 1 /f");
     system("REG ADD \"HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows Defender\" /v AllowFastServiceStartup /t REG_DWORD /d 0 /f");
@@ -22,8 +20,7 @@ void SystemManager::disableDefender() noexcept
 
     qDebug() << "4";
 }
-void SystemManager::disableBrandmauer() noexcept
-{
+void SystemManager::disableBrandmauer() noexcept {
     /*
     system("netsh advfirewall set allprofiles state off");
     system("REG ADD \"HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\mpssvc\" /v Start /t REG_DWORD /d 4 /f");
@@ -32,8 +29,7 @@ void SystemManager::disableBrandmauer() noexcept
     */
     qDebug() << "5";
 }
-void SystemManager::disableUpdates() noexcept
-{
+void SystemManager::disableUpdates() noexcept {
     /*
     system("REG ADD \"HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate\" /v DoNotConnectToWindowsUpdateInternetLocations /t REG_DWORD /d 1 /f");
     system("REG ADD \"HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate\" /v UpdateServiceUrlAlternate /t REG_SZ /d \"server.wsus\" /f");
@@ -44,9 +40,7 @@ void SystemManager::disableUpdates() noexcept
 
     qDebug() << "6";
 }
-
-void SystemManager::createMaxPerfConf() noexcept
-{
+void SystemManager::createMaxPerfConf() noexcept {
     /*system(powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61);*/
      qDebug() << "7";
 }

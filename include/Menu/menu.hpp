@@ -3,16 +3,11 @@
 
 #include <QMenu>
 #include <QAction>
-#include <QActionGroup>
 #include <QMenuBar>
 
-class Menu
-{
-private:
-    static QMenu *initMenu();
-
+class Menu : public QMenuBar {
 public:
-    static QMenuBar *initMenuBar() noexcept;
+    explicit Menu(QWidget* _p_parent = nullptr) noexcept;
 };
 
 #endif // MENU_HPP

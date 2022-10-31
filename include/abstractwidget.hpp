@@ -6,8 +6,7 @@
 #include <QGroupBox>
 #include <QVBoxLayout>
 
-class AbstractWidget : public QWidget
-{
+class AbstractWidget : public QWidget {
     Q_OBJECT
 
 protected:

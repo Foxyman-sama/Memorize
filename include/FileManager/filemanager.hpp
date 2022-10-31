@@ -4,8 +4,7 @@
 #include <QObject>
 #include <QDebug>
 
-class FileManager : public QObject
-{
+class FileManager : public QObject {
     Q_OBJECT
 
 public:

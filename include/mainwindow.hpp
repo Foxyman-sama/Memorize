@@ -12,8 +12,7 @@
 #include "SystemManager/systemmanagerwidget.hpp"
 #include "Menu/menu.hpp"
 
-class MainWindow : public QMainWindow
-{
+class MainWindow : public QMainWindow {
     Q_OBJECT
 
 private:

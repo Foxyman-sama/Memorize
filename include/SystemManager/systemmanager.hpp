@@ -4,8 +4,7 @@
 #include <QObject>
 #include <QDebug>
 
-class SystemManager : public QObject
-{
+class SystemManager : public QObject {
     Q_OBJECT
 
 public:

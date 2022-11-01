@@ -13,14 +13,20 @@ FileManagerWidget::FileManagerWidget(QWidget *_p_parent) :
 
 void FileManagerWidget::processing() noexcept {
     if (p_delwapps_->isChecked()) {
-        fm_.deleteWinApps();
+        p_delwapps_->setCheckState(Qt::Unchecked);
+
+        fm_.deleteWinApps();     
     }  
 
     if (p_clrtmp_->isChecked()) {
+        p_clrtmp_->setCheckState(Qt::Unchecked);
+
         fm_.clearTemp();
     }
 
     if (p_delhibf_->isChecked()) {
+        p_delhibf_->setCheckState(Qt::Unchecked);
+
         fm_.deleteHiberFile();
     }
 }

@@ -15,18 +15,26 @@ SystemManagerWidget::SystemManagerWidget(QWidget *_p_parent) :
 
 void SystemManagerWidget::processing() noexcept {
     if (p_disdef_->isChecked()) {
+        p_disdef_->setCheckState(Qt::Unchecked);
+
         sm_.disableDefender();
     }
 
     if (p_disbr_->isChecked()) {
+        p_disbr_->setCheckState(Qt::Unchecked);
+
         sm_.disableBrandmauer();
     }
 
     if (p_disupd_->isChecked()) {
+        p_disupd_->setCheckState(Qt::Unchecked);
+
         sm_.disableUpdates();
     }   
 
     if (p_crpcfg_->isChecked()) {
+        p_crpcfg_->setCheckState(Qt::Unchecked);
+
         sm_.createMaxPerfConf();
     }
 }

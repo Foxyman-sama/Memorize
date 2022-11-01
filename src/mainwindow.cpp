@@ -2,8 +2,9 @@
 
 MainWindow::MainWindow(QWidget *_p_parent) noexcept :
     QMainWindow(_p_parent) {
-    p_acceptb_  = new QPushButton { "Принять изменения" };
     p_centwidg_ = new QWidget {};
+    p_menu_     = new Menu {};
+    p_acceptb_  = new QPushButton { "Принять изменения" };
     p_fmwidg_   = new FileManagerWidget {};
     p_smwidg_   = new SystemManagerWidget {};
     p_tbar_     = new QTabWidget {};
@@ -23,7 +24,7 @@ void MainWindow::initCentralWidget() noexcept {
     p_mlayout_->addWidget(p_tbar_);
     p_mlayout_->addWidget(p_acceptb_);
 
-    setMenuBar(new Menu {});
+    setMenuBar(p_menu_);
     setCentralWidget(p_centwidg_);
 }
 

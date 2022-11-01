@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.5)
 
-project(Memorize VERSION 0.1 LANGUAGES CXX)
+project(Memorize VERSION 0.1 LANGUAGES CXX RC)
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
@@ -36,6 +36,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(Memorize
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
+        resource/resources.rc
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET Memorize APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR

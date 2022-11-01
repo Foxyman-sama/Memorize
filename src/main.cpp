@@ -3,13 +3,15 @@
 
 int main(int argc, char *argv[]) {
     try {
-        QApplication a(argc, argv);
-        MainWindow w;
-        w.show();
+        QApplication a {argc, argv};
+        MainWindow   window {};
+
+        window.show();
+
         return a.exec();
     }
 
-    catch (const std::exception& e) {
-        qWarning() << e.what();
+    catch (...) {
+        qWarning() << "ERROR!";
     }
 }

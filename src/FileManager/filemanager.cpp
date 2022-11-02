@@ -6,7 +6,7 @@ FileManager::FileManager(QObject *_p_parent) :
 
 void FileManager::deleteWinApps() noexcept {
     qDebug() << "1";
-    //system("powershell.exe -command \"Get-AppxPackage | Remove-AppxPackage\"");
+    //system("powershell.exe -command \"Get-AppxPackage *photos* | Remove-AppxPackage\"");
 }
 
 void FileManager::clearTemp() noexcept {

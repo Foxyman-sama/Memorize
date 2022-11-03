@@ -6,6 +6,8 @@
 #include <QMenuBar>
 
 class MenuBar : public QMenuBar {
+    Q_OBJECT
+
 private:
     QMenu   *p_menu_;
     QAction *p_actsave_;

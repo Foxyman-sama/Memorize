@@ -5,9 +5,18 @@
 #include <QAction>
 #include <QMenuBar>
 
-class Menu : public QMenuBar {
+class MenuBar : public QMenuBar {
+private:
+    QMenu   *p_menu_;
+    QAction *p_actsave_;
+    QAction *p_actload_;
+    QAction *p_actinfo_;
+
+private:
+    void connectAction() noexcept;
+
 public:
-    explicit Menu(QWidget* _p_parent = nullptr) noexcept;
+    explicit MenuBar(QWidget* _p_parent = nullptr) noexcept;
 };
 
 #endif // MENU_HPP

@@ -1,15 +1,22 @@
 #include "include/Menu/menu.hpp"
 
-Menu::Menu(QWidget *_p_parent) noexcept :
+MenuBar::MenuBar(QWidget *_p_parent) noexcept :
     QMenuBar {_p_parent} {
-    QMenu    *p_main {new QMenu {"Меню"}};    
-    QAction  *p_save {new QAction {"Сохранить\tCtrl + S"}};
-    QAction  *p_load {new QAction {"Загрузить\tCtrl + V"}};
-    QAction  *p_exit {new QAction {"Выход\tAlt + F4"}};
+    p_menu_    = new QMenu {"Меню"};
+    p_actsave_ = new QAction {"Сохранить\tCtrl + S"};
+    p_actload_ = new QAction {"Загрузить\tCtrl + V"};
+    p_actinfo_ = new QAction {"Справка\tF1"};
 
-    p_main->addAction(p_save);
-    p_main->addAction(p_load);
-    p_main->addAction(p_exit);
+    p_menu_->addAction(p_actsave_);
+    p_menu_->addAction(p_actload_);
+    p_menu_->addSeparator();
+    p_menu_->addAction(p_actinfo_);
 
-    addMenu(p_main);
+    addMenu(p_menu_);
 }
+
+void MenuBar::connectAction() noexcept
+{
+
+}
+

@@ -1,4 +1,4 @@
-#include "include/abstractwidget.hpp"
+#include "include/AbstractWidget/abstractwidget.hpp"
 
 AbstractWidget::AbstractWidget(QWidget  *_p_parent) noexcept :
     QWidget {_p_parent} {

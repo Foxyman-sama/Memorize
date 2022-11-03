@@ -17,7 +17,7 @@ class MainWindow : public QMainWindow {
 
 private:
     QWidget             *p_centwidg_;
-    Menu                *p_menu_;
+    MenuBar             *p_menubar_;
     QPushButton         *p_acceptb_;
     FileManagerWidget   *p_fmwidg_;
     SystemManagerWidget *p_smwidg_;

@@ -3,7 +3,7 @@
 
 #include <QCheckBox>
 
-#include "../abstractwidget.hpp"
+#include "../AbstractWidget/abstractwidget.hpp"
 #include "filemanager.hpp"
 
 class FileManagerWidget : public AbstractWidget {

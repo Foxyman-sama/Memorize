@@ -23,6 +23,7 @@ set(PROJECT_HEADERS
     include/SystemManager/systemmanagerwidget.hpp
     include/Menu/menu.hpp
     include/Loader/loader.hpp
+    include/TemplateSingleton/templatesingleton.hpp
 )
 set(PROJECT_SOURCES
     src/main.cpp

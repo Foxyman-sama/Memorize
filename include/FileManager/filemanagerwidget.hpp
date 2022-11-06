@@ -16,6 +16,9 @@ private:
 
     FileManager fm_;
 
+private:
+    virtual void prepareSave() noexcept override;
+
 public:
     explicit FileManagerWidget(QWidget *_p_parent = nullptr);
 

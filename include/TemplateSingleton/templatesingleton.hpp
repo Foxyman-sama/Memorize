@@ -1,8 +1,6 @@
 #ifndef TEMPLATESINGLETON_HPP
 #define TEMPLATESINGLETON_HPP
 
-#include <QObject>
-
 class NonCopyable {
 protected:
     NonCopyable() noexcept = default;
@@ -20,7 +18,7 @@ protected:
     Singleton() noexcept = default;
 
 public:
-    T &instance() noexcept {
+    static T &instance() noexcept {
         static T instance {};
 
         return instance;

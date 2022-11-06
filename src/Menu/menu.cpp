@@ -12,11 +12,14 @@ MenuBar::MenuBar(QWidget *_p_parent) noexcept :
     p_menu_->addSeparator();
     p_menu_->addAction(p_actinfo_);
 
+    connectAction();
     addMenu(p_menu_);
 }
 
-void MenuBar::connectAction() noexcept
-{
-
+void MenuBar::connectAction() noexcept {
+    connect(p_actsave_, &QAction::triggered,
+            &loader, &Loader::save);
+    connect(p_actload_, &QAction::triggered,
+            &loader, &Loader::load);
 }
 

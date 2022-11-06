@@ -6,6 +6,8 @@
 #include <QGroupBox>
 #include <QVBoxLayout>
 
+#include "../Loader/loader.hpp"
+
 class AbstractWidget : public QWidget {
     Q_OBJECT
 
@@ -17,6 +19,8 @@ protected:
 protected:
     explicit AbstractWidget(QWidget *_p_parent = nullptr) noexcept;
     virtual ~AbstractWidget() noexcept {}
+
+    virtual void prepareSave() noexcept = 0;
 
 protected slots:
     virtual void processing() noexcept = 0;

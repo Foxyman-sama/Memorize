@@ -5,6 +5,8 @@
 #include <QAction>
 #include <QMenuBar>
 
+#include "../Loader/loader.hpp"
+
 class MenuBar : public QMenuBar {
     Q_OBJECT
 

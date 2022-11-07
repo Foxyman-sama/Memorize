@@ -19,7 +19,9 @@ private:
 public:
     Loader() noexcept = default;
 
-    void addCheckBox(QCheckBox *_p_widget) noexcept;
+    void addCheckBox(QCheckBox *_p_widget) noexcept {
+        p_widgets_.emplace_back(_p_widget);
+    }
 
 public slots:
     void save() noexcept;

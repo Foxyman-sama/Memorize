@@ -4,6 +4,8 @@
 #include <QMenu>
 #include <QAction>
 #include <QMenuBar>
+#include <QMessageBox>
+#include <QKeyEvent>
 
 #include "../Loader/loader.hpp"
 
@@ -18,6 +20,9 @@ private:
 
 private:
     void connectAction() noexcept;
+
+private slots:
+    void showInfo() noexcept;
 
 public:
     explicit MenuBar(QWidget* _p_parent = nullptr) noexcept;

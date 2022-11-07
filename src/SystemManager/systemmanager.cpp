@@ -42,5 +42,24 @@ void SystemManager::disableUpdates() noexcept {
 }
 void SystemManager::createMaxPerfConf() noexcept {
     /*system(powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61);*/
-     qDebug() << "7";
+    qDebug() << "7";
+}
+void SystemManager::disableOneDrive() noexcept {
+    /*
+    system("taskkill /f /im OneDrive.exe");
+    system("C:\\Windows\\SysWOW64\\OneDriveSetup.exe /uninstall");
+    */
+
+    qDebug() << "8";
+}
+
+void SystemManager::disableSmartScreen() noexcept {
+    /*
+    system("REG ADD \"HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\" /v SmartScreenEnabled /t REG_SZ /d \"Off\" /f");
+    system("REG ADD \"HKEY_CURRENT_USER\\Software\\Classes\\Local Settings\\Software\\Microsoft\\Windows\\CurrentVersion\\AppContainer\\Storage\\microsoft.microsoftedge_8wekyb3d8bbwe\\MicrosoftEdge\\PhishingFilter\" "
+           "/v EnabledV9 /t REG_DWORD /d 0 /f");
+    system("REG ADD \"HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\AppHost\" /v EnableWebContentEvaluation /t REG_DWORD /d 0 /f");
+    */
+
+    qDebug() << "9";
 }

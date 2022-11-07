@@ -14,6 +14,8 @@ public:
     void disableBrandmauer() noexcept;
     void disableUpdates() noexcept;
     void createMaxPerfConf() noexcept;
+    void disableOneDrive() noexcept;
+    void disableSmartScreen() noexcept;
 };
 
 #endif // SYSTEMMANAGER_HPP

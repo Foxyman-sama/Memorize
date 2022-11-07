@@ -14,6 +14,8 @@ private:
     QCheckBox *p_disbr_;
     QCheckBox *p_disupd_;
     QCheckBox *p_crpcfg_;
+    QCheckBox *p_disonedr_;
+    QCheckBox *p_dissmscr_;
 
     SystemManager sm_;
 

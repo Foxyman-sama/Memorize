@@ -10,10 +10,10 @@ class ServiceManagerWidget : public AbstractWidget {
     Q_OBJECT
 
 private:
+    ServiceManager sm_;
+
     QCheckBox *p_disind_;
     QCheckBox *p_dissmain_;
-
-    ServiceManager sm_;
 
 private:
     virtual void prepareSave() noexcept override;

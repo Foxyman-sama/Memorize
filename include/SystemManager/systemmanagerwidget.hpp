@@ -9,7 +9,9 @@
 class SystemManagerWidget : public AbstractWidget {
     Q_OBJECT
 
-private:
+private:    
+    SystemManager sm_;
+
     /**
      * p_disdef_   - Disable Defender.
      * p_disbr_    - Disable Brandmauer.
@@ -27,8 +29,6 @@ private:
     QCheckBox *p_disonedr_;
     QCheckBox *p_dissmscr_;
     QCheckBox *p_disuac_;
-
-    SystemManager sm_;
 
 private:
     virtual void prepareSave() noexcept override;

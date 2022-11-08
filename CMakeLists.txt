@@ -26,6 +26,8 @@ set(PROJECT_HEADERS
     include/TemplateSingleton/templatesingleton.hpp
     include/ServiceManager/servicemanager.hpp
     include/ServiceManager/servicemanagerwidget.hpp
+    include/TelemetryManager/telemetrymanager.hpp
+    include/TelemetryManager/telemetrymanagerwidget.hpp
 )
 set(PROJECT_SOURCES
     src/main.cpp
@@ -39,6 +41,8 @@ set(PROJECT_SOURCES
     src/Loader/loader.cpp
     src/ServiceManager/servicemanager.cpp
     src/ServiceManager/servicemanagerwidget.cpp
+    src/TelemetryManager/telemetrymanager.cpp
+    src/TelemetryManager/telemetrymanagerwidget.cpp
 )
 
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)

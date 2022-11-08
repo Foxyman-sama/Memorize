@@ -10,11 +10,11 @@ class FileManagerWidget : public AbstractWidget {
     Q_OBJECT
 
 private:
+    FileManager fm_;
+
     QCheckBox *p_delwapps_;
     QCheckBox *p_clrtmp_;
     QCheckBox *p_delhibf_;
-
-    FileManager fm_;
 
 private:
     virtual void prepareSave() noexcept override;

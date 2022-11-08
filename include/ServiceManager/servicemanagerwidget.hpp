@@ -6,11 +6,23 @@
 #include "include/AbstractWidget/abstractwidget.hpp"
 #include "servicemanager.hpp"
 
-class ServiceManagerWidget : public AbstractWidget
-{
+class ServiceManagerWidget : public AbstractWidget {
     Q_OBJECT
+
+private:
+    QCheckBox *p_disind_;
+    QCheckBox *p_dissmain_;
+
+    ServiceManager sm_;
+
+private:
+    virtual void prepareSave() noexcept override;
+
 public:
-    ServiceManagerWidget();
+    explicit ServiceManagerWidget(QWidget *_p_parent = nullptr);
+
+public slots:
+    virtual void processing() noexcept override;
 };
 
 #endif // SERVICEMANAGERWIDGET_HPP

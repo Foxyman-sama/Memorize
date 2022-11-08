@@ -12,6 +12,10 @@ class TelemetryManagerWidget : public AbstractWidget {
 private:
     TelemetryManager tm_;
 
+    /**
+     * p_disbtel_ - Disable standart telemetry.
+     */
+
     QCheckBox *p_disbtel_;
 
 private:

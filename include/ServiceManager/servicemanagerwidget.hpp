@@ -12,6 +12,11 @@ class ServiceManagerWidget : public AbstractWidget {
 private:
     ServiceManager sm_;
 
+    /**
+     * p_disind_   - Disable indexing.
+     * p_dissmain_ - Disable PreFetch.
+     */
+
     QCheckBox *p_disind_;
     QCheckBox *p_dissmain_;
 

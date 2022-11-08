@@ -12,6 +12,12 @@ class FileManagerWidget : public AbstractWidget {
 private:
     FileManager fm_;
 
+    /**
+     * p_delwapps_ - Delete all installed Windows apps.
+     * p_clrtmp_   - Clear folder "Temp".
+     * p_delhibf_  - Delete hibernation file.
+     */
+
     QCheckBox *p_delwapps_;
     QCheckBox *p_clrtmp_;
     QCheckBox *p_delhibf_;

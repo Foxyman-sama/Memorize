@@ -11,6 +11,7 @@ public:
     void createMaxPerfConf() noexcept;
     void disableOneDrive() noexcept;
     void disableSmartScreen() noexcept;
+    void disableUAC() noexcept;
 };
 
 #endif // SYSTEMMANAGER_HPP

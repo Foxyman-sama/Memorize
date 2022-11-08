@@ -1,14 +1,25 @@
 #include "include/FileManager/filemanager.hpp"
 
+#define DEBUG
+
 void FileManager::deleteWinApps() noexcept {
+#ifndef DEBUG
+    system("powershell.exe -command \"Get-AppxPackage *photos* | Remove-AppxPackage\"");
+#endif
+
     qDebug() << "1";
-    //system("powershell.exe -command \"Get-AppxPackage *photos* | Remove-AppxPackage\"");
 }
 void FileManager::clearTemp() noexcept {
+#ifndef DEBUG
+    system("rd %temp% /s /q");
+#endif
+
     qDebug() << "2";
-    //system("rd %temp% /s /q");
 }
 void FileManager::deleteHiberFile() noexcept {
+#ifndef DEBUG
+    system("powercfg -h off");
+#endif
+
     qDebug() << "3";
-    //system("powercfg -h off");
 }

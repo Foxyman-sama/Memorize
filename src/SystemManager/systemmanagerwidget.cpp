@@ -8,6 +8,7 @@ SystemManagerWidget::SystemManagerWidget(QWidget *_p_parent) :
     p_crpcfg_   = new QCheckBox {"Создать конфигурация питания максимальной производительности"};
     p_disonedr_ = new QCheckBox {"Отключение OneDrive"};
     p_dissmscr_ = new QCheckBox {"Отключить SmartScreen"};
+    p_disuac_   = new QCheckBox {"Отключить UAC"};
 
     p_glayout_->addWidget(p_disdef_);
     p_glayout_->addWidget(p_disbr_);
@@ -15,6 +16,7 @@ SystemManagerWidget::SystemManagerWidget(QWidget *_p_parent) :
     p_glayout_->addWidget(p_crpcfg_);
     p_glayout_->addWidget(p_disonedr_);
     p_glayout_->addWidget(p_dissmscr_);
+    p_glayout_->addWidget(p_disuac_);
 
     prepareSave();
 }
@@ -26,6 +28,7 @@ void SystemManagerWidget::prepareSave() noexcept {
     loader.addCheckBox(p_crpcfg_);
     loader.addCheckBox(p_disonedr_);
     loader.addCheckBox(p_dissmscr_);
+    loader.addCheckBox(p_disuac_);
 }
 
 void SystemManagerWidget::processing() noexcept {
@@ -63,5 +66,11 @@ void SystemManagerWidget::processing() noexcept {
         p_dissmscr_->setCheckState(Qt::Unchecked);
 
         sm_.disableSmartScreen();
+    }
+
+    if (p_disuac_->isChecked()) {
+        p_disuac_->setCheckState(Qt::Unchecked);
+
+        sm_.disableUAC();
     }
 }

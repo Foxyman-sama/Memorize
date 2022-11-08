@@ -24,6 +24,8 @@ set(PROJECT_HEADERS
     include/Menu/menu.hpp
     include/Loader/loader.hpp
     include/TemplateSingleton/templatesingleton.hpp
+    include/ServiceManager/servicemanager.hpp
+    include/ServiceManager/servicemanagerwidget.hpp
 )
 set(PROJECT_SOURCES
     src/main.cpp
@@ -35,6 +37,8 @@ set(PROJECT_SOURCES
     src/SystemManager/systemmanagerwidget.cpp
     src/Menu/menu.cpp
     src/Loader/loader.cpp
+    src/ServiceManager/servicemanager.cpp
+    src/ServiceManager/servicemanagerwidget.cpp
 )
 
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)

@@ -3,7 +3,7 @@
 
 #include <QCheckBox>
 
-#include "../AbstractWidget/abstractwidget.hpp"
+#include "include/AbstractWidget/abstractwidget.hpp"
 #include "systemmanager.hpp"
 
 class SystemManagerWidget : public AbstractWidget {

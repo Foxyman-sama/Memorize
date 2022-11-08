@@ -1,8 +1,8 @@
 #include "include/Loader/loader.hpp"
 
 void Loader::setDocumentPath() noexcept {
-    char       *username { };
-    size_t      size { };
+    char   *username { };
+    size_t  size { };
 
     _dupenv_s(&username, &size, "USERPROFILE");
 

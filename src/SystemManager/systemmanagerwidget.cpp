@@ -1,14 +1,5 @@
 #include "include/SystemManager/systemmanagerwidget.hpp"
 
-void SystemManagerWidget::prepareSave() noexcept {
-    loader.addCheckBox(p_disdef_);
-    loader.addCheckBox(p_disbr_);
-    loader.addCheckBox(p_disupd_);
-    loader.addCheckBox(p_crpcfg_);  
-    loader.addCheckBox(p_disonedr_);
-    loader.addCheckBox(p_dissmscr_);
-}
-
 SystemManagerWidget::SystemManagerWidget(QWidget *_p_parent) :
     AbstractWidget {_p_parent} {
     p_disdef_   = new QCheckBox {"Отключение Windows Защитника"};
@@ -26,6 +17,15 @@ SystemManagerWidget::SystemManagerWidget(QWidget *_p_parent) :
     p_glayout_->addWidget(p_dissmscr_);
 
     prepareSave();
+}
+
+void SystemManagerWidget::prepareSave() noexcept {
+    loader.addCheckBox(p_disdef_);
+    loader.addCheckBox(p_disbr_);
+    loader.addCheckBox(p_disupd_);
+    loader.addCheckBox(p_crpcfg_);
+    loader.addCheckBox(p_disonedr_);
+    loader.addCheckBox(p_dissmscr_);
 }
 
 void SystemManagerWidget::processing() noexcept {

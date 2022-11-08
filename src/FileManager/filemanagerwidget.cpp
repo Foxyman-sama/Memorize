@@ -1,11 +1,5 @@
 #include "include/FileManager/filemanagerwidget.hpp"
 
-void FileManagerWidget::prepareSave() noexcept {
-    loader.addCheckBox(p_delwapps_);
-    loader.addCheckBox(p_clrtmp_);
-    loader.addCheckBox(p_delhibf_);
-}
-
 FileManagerWidget::FileManagerWidget(QWidget *_p_parent) :
     AbstractWidget{_p_parent} {
     p_delwapps_ = new QCheckBox {"Удаление всех встроенных приложений Windows"};
@@ -17,6 +11,12 @@ FileManagerWidget::FileManagerWidget(QWidget *_p_parent) :
     p_glayout_->addWidget(p_delhibf_);
 
     prepareSave();
+}
+
+void FileManagerWidget::prepareSave() noexcept {
+    loader.addCheckBox(p_delwapps_);
+    loader.addCheckBox(p_clrtmp_);
+    loader.addCheckBox(p_delhibf_);
 }
 
 void FileManagerWidget::processing() noexcept {

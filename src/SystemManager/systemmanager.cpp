@@ -1,10 +1,5 @@
 #include "include/SystemManager/systemmanager.hpp"
 
-SystemManager::SystemManager(QObject *_p_parent) :
-    QObject{_p_parent} {
-
-}
-
 void SystemManager::disableDefender() noexcept {
     /*
     system("REG ADD \"HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows Defender\" /v DisableAntiSpyware /t REG_DWORD /d 1 /f");
@@ -52,7 +47,6 @@ void SystemManager::disableOneDrive() noexcept {
 
     qDebug() << "8";
 }
-
 void SystemManager::disableSmartScreen() noexcept {
     /*
     system("REG ADD \"HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\" /v SmartScreenEnabled /t REG_SZ /d \"Off\" /f");

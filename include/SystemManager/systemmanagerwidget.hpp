@@ -30,9 +30,6 @@ private:
     QCheckBox *p_dissmscr_;
     QCheckBox *p_disuac_;
 
-private:
-    virtual void prepareSave() noexcept override;
-
 public:
     explicit SystemManagerWidget(QWidget *_p_parent = nullptr);
 

@@ -22,9 +22,6 @@ private:
     QCheckBox *p_clrtmp_;
     QCheckBox *p_delhibf_;
 
-private:
-    virtual void prepareSave() noexcept override;
-
 public:
     explicit FileManagerWidget(QWidget *_p_parent = nullptr);
 

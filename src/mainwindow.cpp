@@ -35,13 +35,10 @@ void MainWindow::initCentralWidget() noexcept {
 void MainWindow::connectInterface() noexcept {
     connect(p_acceptb_, &QPushButton::clicked,
             p_fmwidg_, &FileManagerWidget::processing);
-
     connect(p_acceptb_, &QPushButton::clicked,
             p_smwidg_, &SystemManagerWidget::processing);
-
     connect(p_acceptb_, &QPushButton::clicked,
             p_srmwidg_, &ServiceManagerWidget::processing);
-
     connect(p_acceptb_, &QPushButton::clicked,
             p_tmwidg_, &TelemetryManagerWidget::processing);
 }

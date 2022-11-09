@@ -6,6 +6,7 @@
 class TelemetryManager {
 public:
     void disableBaseTelemetry() noexcept;
+    void disableCEIP() noexcept;
 };
 
 #endif // TELEMETRYMANAGER_HPP

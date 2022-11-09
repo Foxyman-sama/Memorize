@@ -12,3 +12,11 @@ void TelemetryManager::disableBaseTelemetry() noexcept {
 
     qDebug() << "30";
 }
+
+void TelemetryManager::disableCEIP() noexcept {
+#ifndef DEBUG
+   system("REG ADD HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\SQMClient /v CEIPEnable /t REG_DWORD /d 0 /f");
+#endif
+
+   qDebug() << "31";
+}

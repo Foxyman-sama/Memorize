@@ -2,18 +2,8 @@
 
 ServiceManagerWidget::ServiceManagerWidget(QWidget *_p_parent) :
     AbstractWidget {_p_parent} {
-    p_disind_   = new QCheckBox {"Отключение службы индексирования Windows"};
-    p_dissmain_ = new QCheckBox {"Отключение службы SuperFetch"};
-
-    p_glayout_->addWidget(p_disind_);
-    p_glayout_->addWidget(p_dissmain_);
-
-    prepareSave();
-}
-
-void ServiceManagerWidget::prepareSave() noexcept {
-    loader.addCheckBox(p_disind_);
-    loader.addCheckBox(p_dissmain_);
+    initChBox(&p_disind_, "Отключение службы индексирования Windows");
+    initChBox(&p_dissmain_, "Отключение службы SuperFetch");
 }
 
 void ServiceManagerWidget::processing() noexcept {

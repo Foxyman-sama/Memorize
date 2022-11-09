@@ -2,15 +2,8 @@
 
 TelemetryManagerWidget::TelemetryManagerWidget(QWidget *_p_parent) :
     AbstractWidget {_p_parent} {
-    p_disbtel_ = new QCheckBox {"Отключить базовую телеметрию"};
-
-    p_glayout_->addWidget(p_disbtel_);
-
-    prepareSave();
-}
-
-void TelemetryManagerWidget::prepareSave() noexcept {
-    loader.addCheckBox(p_disbtel_);
+    initChBox(&p_disbtel_, "Отключить базовую телеметрию");
+    initChBox(&p_disceip_, "Отключить CEIP");
 }
 
 void TelemetryManagerWidget::processing() noexcept {
@@ -18,5 +11,11 @@ void TelemetryManagerWidget::processing() noexcept {
         p_disbtel_->setCheckState(Qt::Unchecked);
 
         tm_.disableBaseTelemetry();
+    }
+
+    if (p_disceip_->isChecked()) {
+        p_disceip_->setCheckState(Qt::Unchecked);
+
+        tm_.disableCEIP();
     }
 }

@@ -17,9 +17,7 @@ private:
      */
 
     QCheckBox *p_disbtel_;
-
-private:
-    virtual void prepareSave() noexcept override;
+    QCheckBox *p_disceip_;
 
 public:
     explicit TelemetryManagerWidget(QWidget *_p_parent = nullptr);

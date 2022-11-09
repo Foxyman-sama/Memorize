@@ -20,9 +20,6 @@ private:
     QCheckBox *p_disind_;
     QCheckBox *p_dissmain_;
 
-private:
-    virtual void prepareSave() noexcept override;
-
 public:
     explicit ServiceManagerWidget(QWidget *_p_parent = nullptr);
 

@@ -2,33 +2,13 @@
 
 SystemManagerWidget::SystemManagerWidget(QWidget *_p_parent) :
     AbstractWidget {_p_parent} {
-    p_disdef_   = new QCheckBox {"Отключение Windows Защитника"};
-    p_disbr_    = new QCheckBox {"Отключение Windows Брандмауэра"};
-    p_disupd_   = new QCheckBox {"Отключение обновлений Windows"};
-    p_crpcfg_   = new QCheckBox {"Создать конфигурация питания максимальной производительности"};
-    p_disonedr_ = new QCheckBox {"Отключение OneDrive"};
-    p_dissmscr_ = new QCheckBox {"Отключить SmartScreen"};
-    p_disuac_   = new QCheckBox {"Отключить UAC"};
-
-    p_glayout_->addWidget(p_disdef_);
-    p_glayout_->addWidget(p_disbr_);
-    p_glayout_->addWidget(p_disupd_);
-    p_glayout_->addWidget(p_crpcfg_);
-    p_glayout_->addWidget(p_disonedr_);
-    p_glayout_->addWidget(p_dissmscr_);
-    p_glayout_->addWidget(p_disuac_);
-
-    prepareSave();
-}
-
-void SystemManagerWidget::prepareSave() noexcept {
-    loader.addCheckBox(p_disdef_);
-    loader.addCheckBox(p_disbr_);
-    loader.addCheckBox(p_disupd_);
-    loader.addCheckBox(p_crpcfg_);
-    loader.addCheckBox(p_disonedr_);
-    loader.addCheckBox(p_dissmscr_);
-    loader.addCheckBox(p_disuac_);
+    initChBox(&p_disdef_, "Отключение Windows Защитника");
+    initChBox(&p_disbr_, "Отключение Windows Брандмауэра");
+    initChBox(&p_disupd_, "Отключение обновлений Windows");
+    initChBox(&p_crpcfg_, "Создать конфигурация питания максимальной производительности");
+    initChBox(&p_disonedr_, "Отключение OneDrive");
+    initChBox(&p_dissmscr_, "Отключить SmartScreen");
+    initChBox(&p_disuac_, "Отключить UAC");
 }
 
 void SystemManagerWidget::processing() noexcept {

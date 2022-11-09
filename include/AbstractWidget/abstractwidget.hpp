@@ -20,7 +20,11 @@ protected:
     explicit AbstractWidget(QWidget *_p_parent = nullptr) noexcept;
     virtual ~AbstractWidget() noexcept {}
 
-    virtual void prepareSave() noexcept = 0;
+    void initChBox(QCheckBox         **_p_chbox,
+                   const std::string  &_title) noexcept;
+    void prepareSave(QCheckBox *_p_chbox) noexcept {
+        loader.addCheckBox(_p_chbox);
+    }
 
 protected slots:
     virtual void processing() noexcept = 0;

@@ -14,6 +14,7 @@ private:
 
     /**
      * p_disbtel_ - Disable standart telemetry.
+     * p_disceip_ - Disable CEIP.
      */
 
     QCheckBox *p_disbtel_;

@@ -18,7 +18,7 @@ protected:
 
 protected:
     explicit AbstractWidget(QWidget *_p_parent = nullptr) noexcept;
-    virtual ~AbstractWidget() noexcept {}
+    virtual ~AbstractWidget() noexcept = default;
 
     void initChBox(QCheckBox         **_p_chbox,
                    const std::string  &_title) noexcept;

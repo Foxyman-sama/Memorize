@@ -17,7 +17,7 @@ void Loader::save() noexcept {
 
     fout_.open(docpath_ + "\\settings.txt");
 
-    for (size_t it {}; it < p_widgets_.size(); ++it) {
+    for (size_t it { }; it < p_widgets_.size(); ++it) {
         fout_ << it << ' ' << p_widgets_[it]->isChecked() << std::endl;
     }
 

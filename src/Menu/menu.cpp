@@ -7,6 +7,10 @@ MenuBar::MenuBar(QWidget *_p_parent) noexcept :
     p_actload_ = new QAction {"Загрузить"};
     p_actinfo_ = new QAction {"Справка"};
 
+    p_actsave_->setIcon(QIcon("../../resource/save.png"));
+    p_actload_->setIcon(QIcon("../../resource/load.png"));
+    p_actinfo_->setIcon(QIcon("../../resource/info.png"));
+
     p_menu_->addAction(p_actsave_);
     p_menu_->addAction(p_actload_);
     p_menu_->addSeparator();

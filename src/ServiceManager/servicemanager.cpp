@@ -1,6 +1,6 @@
 #include "include/ServiceManager/servicemanager.hpp"
 
-#define DEBUG
+#define NDEBUG
 
 void ServiceManager::disableIndexing() noexcept {
 #ifndef DEBUG

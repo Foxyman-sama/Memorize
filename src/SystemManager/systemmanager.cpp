@@ -1,6 +1,6 @@
 #include "include/SystemManager/systemmanager.hpp"
 
-#define DEBUG
+#define NDEBUG
 
 void SystemManager::disableDefender() noexcept {
 #ifndef DEBUG
@@ -40,7 +40,7 @@ void SystemManager::disableUpdates() noexcept {
 }
 void SystemManager::createMaxPerfConf() noexcept {
 #ifndef DEBUG
-    system(powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61);
+    system("powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61");
 #endif
 
     qDebug() << "7";

@@ -1,6 +1,6 @@
 #include "include/FileManager/filemanager.hpp"
 
-#define DEBUG
+#define NDEBUG
 
 void FileManager::deleteWinApps() noexcept {
 #ifndef DEBUG

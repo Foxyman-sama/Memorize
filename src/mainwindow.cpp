@@ -2,6 +2,7 @@
 
 MainWindow::MainWindow(QWidget *_p_parent) noexcept :
     QMainWindow(_p_parent) {
+
     p_centwidg_ = new QWidget {};
     p_menubar_  = new MenuBar {};
     p_acceptb_  = new QPushButton { "Принять изменения" };
@@ -11,6 +12,16 @@ MainWindow::MainWindow(QWidget *_p_parent) noexcept :
     p_tmwidg_   = new TelemetryManagerWidget {};
     p_tbar_     = new QTabWidget {};
     p_mlayout_  = new QGridLayout {};
+
+    p_acceptb_->setStyleSheet(
+        "height: 20px;"
+        "background-color: rgb(145, 187, 194);"
+        "border-width: 1px;"
+        "border-style: solid;"
+        "border-color: black;"
+        "border-radius: 4px;"
+    );
+
 
     initCentralWidget();
     connectInterface();

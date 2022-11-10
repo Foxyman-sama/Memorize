@@ -1,6 +1,6 @@
 #include "include/TelemetryManager/telemetrymanager.hpp"
 
-#define DEBUG
+#define NDEBUG
 
 void TelemetryManager::disableBaseTelemetry() noexcept {
 #ifndef DEBUG

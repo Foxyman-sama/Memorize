@@ -1,5 +1,5 @@
 # Memorize
-The Window tweaker project.
+The Windows tweaker project.
 
 This tweaker can work with:
 - Files
